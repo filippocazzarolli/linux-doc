@@ -86,3 +86,10 @@ echo "bcf boot add 1 fs0:\EFI\GRUB\grubx64.efi \"My GRUB bootloader\"" > /boot/e
 echo "exit" > /boot/efi/startup.nsh
 
 ```
+
+#### Finish
+```
+exit
+umount -R /mnt
+reboot
+```
