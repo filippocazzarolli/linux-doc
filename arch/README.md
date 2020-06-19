@@ -65,6 +65,24 @@ vim /etc/locale.gen
 locale-gen
 ln -s /usr/share/zoneinfo/Aisa/Kolkata /etc/localtime
 hwclock --systohc --utc
+passwd
 ```
 
 #### Boot loader
+To install the GRUB boot loader in UEFI machines on the first hard-disk and also detect Arch Linux and configure the GRUB boot loader file, run the following commands as illustrated in the following screenshots.
+```
+pacman -S grub efibootmgr
+
+mkdir /boot/efi
+mount /dev/sda1 /boot/efi
+
+grup-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
+grub-mkconfig -o /boot/grub/grub.cfg
+
+mkdir /boot/efi/EFI/BOOT
+cp /boot/efi/EFI/GRUB/grubx64.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
+
+echo "bcf boot add 1 fs0:\EFI\GRUB\grubx64.efi \"My GRUB bootloader\"" > /boot/efi/startup.nsh
+echo "exit" > /boot/efi/startup.nsh
+
+```
