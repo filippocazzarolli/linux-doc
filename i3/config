@@ -209,6 +209,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# flameshot with gui
+bindsym $mod+Shift+p exec flameshot gui
+
 # gaps
 gaps inner 10
 gaps outer 0
