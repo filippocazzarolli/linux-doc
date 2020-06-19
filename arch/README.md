@@ -19,7 +19,34 @@ Now let’s actually start creating disk layout partition table by running cfdis
 ```
 cfdisk /dev/sda
 fdisk -l
+
 mkfs.fat -F32 /dev/sda1
 mkfs.ext4 /dev/sda3
 mkswap /dev/sda2
+```
+
+#### Install Arch Linux
+```
+mount /dev/sda3 /mnt
+swapon /dev/sda2
+```
+To increase installation packages download speed you can edit /etc/pacman.d/mirrorlist file and select the closest mirror website (usually choose your country server location) on top of the mirror file list.
+```
+vim /etc/pacman.d/mirrorlist
+```
+You can also enable Arch Multilib support for the live system by uncommenting the following lines from /etc/pacman.conf file.
+```
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+start installing Arch Linux by issuing the following command
+```
+pacstrap /mnt base base-devel linux linux-firmware vim
+```
+
+Generate fstab file for your new Arch Linux system by issuing the following command
+```
+genfstab -U -p /mnt >> /mnt/etc/fstab
+
+cat /mnt/etc/fstab
 ```
