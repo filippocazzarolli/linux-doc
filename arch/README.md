@@ -50,3 +50,21 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 
 cat /mnt/etc/fstab
 ```
+
+#### Arch Linux System Configuration
+
+```
+arch-chroot /mnt
+echo "LNX-dev" > /etc/hostname
+```
+
+configure your system Language
+```
+pacman -S vim
+vim /etc/locale.gen
+locale-gen
+ln -s /usr/share/zoneinfo/Aisa/Kolkata /etc/localtime
+hwclock --systohc --utc
+```
+
+#### Boot loader
