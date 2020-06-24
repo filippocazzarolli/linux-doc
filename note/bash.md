@@ -1,26 +1,22 @@
 ## history
-!! -> last command
+`!!` last command
 
-!ls -> last ls comand
+`!ls` last ls comand
 
-$_ -> last argument (mkdir test && cd $_)
+`$_` last argument (mkdir test && cd $_)
 
-$? -> exit code
+`$?` exit code
 
-$$ -> PID
+`$$` PID
 
 ## General
-echo {1,2,3}
+`echo {1,2,3}` 1 2 3
 
-1 2 3
+`echo {100..110}` 100 101 102 103 104 105 106 107 108 109 110
 
-echo {100..110}
+`for i in * ; do echo "$i" ; done` list file in a dir
 
-100 101 102 103 104 105 106 107 108 109 110
-
-for i in * ; do echo "$i" ; done # list file in a dir
-
-for i in ** ; do echo "$i" ; done # sub dir
+`for i in ** ; do echo "$i" ; done` sub dir
 
 ## Variable
 a=test <- string
@@ -44,9 +40,9 @@ thisisaverylong
 ## Array
 `fruit=(apple pear banana)`
 
-`echo ${fruit[0]}` -> print first value
+`echo ${fruit[0]}` print first value
 
-`echo ${fruit[*]}` -> print all array
+`echo ${fruit[*]}` print all array
 
 `echo ${ARRAY[*]}` one two one three one four
 
@@ -61,7 +57,7 @@ thisisaverylong
 ## Replace 
 `my_var="Give me a banana banana"`
 
-`echo ${my_var/banana/pera}` -> Give me a pera banana
+`echo ${my_var/banana/pera}` Give me a pera banana
 
-`echo ${my_var//banana/pera}` -> Give me a pera pera
+`echo ${my_var//banana/pera}` Give me a pera pera
 
