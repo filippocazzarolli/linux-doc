@@ -6,7 +6,7 @@ Install
 
 `pacman -Syu` update package database and upgrade installed packages
 
-`pacman -Ss <name>` search package on remote repo 
+`pacman -Ss <name>` search package by <name> on remote repo 
 
 `pacman -Sy` update package database
 
