@@ -1,4 +1,4 @@
-## history
+## History
 `!!` last command
 
 `!ls` last ls comand
@@ -19,9 +19,11 @@
 `for i in ** ; do echo "$i" ; done` sub dir
 
 ## Variable
-a=test <- string
-a=`ls /home` <- result of command
-echo ${x:-default} <- if x not exist return default value
+`a=test` string
+
+`a=\`ls /home\`` result of command
+
+echo ${x:-default}  if x not exist return default value
 echo ${x:=default} <- if x not exist return default value and assign value in var
 echo ${x:+value} <- if exist assegn value
 echo ${x:2:1} -> x=0123456789 return 2 (substring)
