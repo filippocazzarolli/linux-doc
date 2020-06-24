@@ -23,21 +23,23 @@
 
 ``a=`ls /home` `` result of command
 
-echo ${x:-default}  if x not exist return default value
-echo ${x:=default} <- if x not exist return default value and assign value in var
-echo ${x:+value} <- if exist assegn value
-echo ${x:2:1} -> x=0123456789 return 2 (substring)
-echo ${#x} <- retun length of x variable
+`echo ${x:-default}`  if x not exist return default value
 
-[bob in ~] echo $STRING
-thisisaverylongname
-[bob in ~] echo ${STRING#this}
-isaverylongname
+`echo ${x:=default}` if x not exist return default value and assign value in var
 
-[bob in ~] echo $STRING
-thisisaverylongname
-[bob in ~] echo ${STRING%name}
-thisisaverylong
+`echo ${x:+value}` if exist assegn value
+
+`echo ${x:2:1}` x=0123456789 return 2 (substring)
+
+`echo ${#x}` retun length of x variable
+
+`echo $STRING` thisisaverylongname
+
+`echo ${STRING#this}` isaverylongname
+
+`echo $STRING` thisisaverylongname
+
+`echo ${STRING%name}` thisisaverylong
 
 ## Array
 `fruit=(apple pear banana)`
