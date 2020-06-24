@@ -21,7 +21,7 @@
 ## Variable
 `a=test` string
 
-`a=\`ls /home\`` result of command
+``a=`ls /home` `` result of command
 
 echo ${x:-default}  if x not exist return default value
 echo ${x:=default} <- if x not exist return default value and assign value in var
