@@ -42,20 +42,21 @@ thisisaverylongname
 thisisaverylong
 
 ## Array
-fruit=(apple pear banana)
-echo ${fruit[0]} -> print first value
-echo ${fruit[*]} -> print all array
+`fruit=(apple pear banana)`
 
-[bob in ~] echo ${ARRAY[*]}
-one two one three one four
-[bob in ~] echo ${ARRAY[*]#one}
-two three four
-[bob in ~] echo ${ARRAY[*]#t}
-one wo one hree one four
-[bob in ~] echo ${ARRAY[*]#t*}
-one wo one hree one four
-[bob in ~] echo ${ARRAY[*]##t*}
-one one one four
+`echo ${fruit[0]}` -> print first value
+
+`echo ${fruit[*]}` -> print all array
+
+`echo ${ARRAY[*]}` one two one three one four
+
+`echo ${ARRAY[*]#one}` two three four
+
+`echo ${ARRAY[*]#t}` one wo one hree one four
+
+`echo ${ARRAY[*]#t*}` one wo one hree one four
+
+`echo ${ARRAY[*]##t*}` one one one four
 
 ## Replace 
 `my_var="Give me a banana banana"`
