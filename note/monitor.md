@@ -1,8 +1,7 @@
-# xdpyinfo - display information utility for X
+# Monitor
 
-xdpyinfo | head
+`xdpyinfo` - display information utility for X
 
+`xrandr` primitive command line interface to RandR extension
 
-# xrandr - primitive command line interface to RandR extension
-
-# xprop - property displayer for X
+`xprop` property displayer for X ( find class name)
