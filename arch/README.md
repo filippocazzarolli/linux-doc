@@ -68,6 +68,20 @@ hwclock --systohc --utc
 passwd
 ```
 
+
+#### Network
+```
+pacman -S wpa_supplicant
+pacman -S wireless_tools
+pacman -S networkmanager
+
+systemctl enable NetworkManager.service
+systemctl enable wpa_supplicant.service
+systemctl start NetworkManager.service
+systemctl start wpa_supplicant.service
+```
+
+
 #### Boot loader
 To install the GRUB boot loader in UEFI machines on the first hard-disk and also detect Arch Linux and configure the GRUB boot loader file, run the following commands as illustrated in the following screenshots.
 ```
