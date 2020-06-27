@@ -97,7 +97,7 @@ mkdir /boot/efi/EFI/BOOT
 cp /boot/efi/EFI/GRUB/grubx64.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
 
 echo "bcf boot add 1 fs0:\EFI\GRUB\grubx64.efi \"My GRUB bootloader\"" > /boot/efi/startup.nsh
-echo "exit" > /boot/efi/startup.nsh
+echo "exit" >> /boot/efi/startup.nsh
 
 ```
 
