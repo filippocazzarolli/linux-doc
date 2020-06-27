@@ -77,8 +77,8 @@ pacman -S networkmanager
 
 systemctl enable NetworkManager.service
 systemctl enable wpa_supplicant.service
-systemctl start NetworkManager.service
-systemctl start wpa_supplicant.service
+systemctl start NetworkManager.service // dopo il riavvio
+systemctl start wpa_supplicant.service // dop il riavvio
 ```
 
 
