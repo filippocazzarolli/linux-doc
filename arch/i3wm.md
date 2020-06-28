@@ -22,7 +22,9 @@
 
 `lspci -knn | grep -iA2 audio` list audio pci
 
-modprod.d/10-alsa.conf.d <-- conf kernel
+```sudo vim /etc/modprobe.d/alsa-base.conf
+options snd_mia index=0
+options snd_hda_intel index=1```
 
 #### extra
-sudo pacman -S alacritty ranger rofi dmenu 
+`sudo pacman -S alacritty ranger rofi dmenu`
