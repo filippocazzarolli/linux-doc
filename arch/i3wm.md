@@ -1,3 +1,6 @@
+##### bash completion
+`sudo pacman -S bash-completion`
+
 ##### Xorg server
 `sudo pacman -S xorg-server xorg-xinit`
 
@@ -6,3 +9,5 @@
 ##### i3 vm
 `sudo pacman -S i3`
 
+##### lighhdm
+`sudo pacman -S lightdm lightdm-webkit2-greeter`
