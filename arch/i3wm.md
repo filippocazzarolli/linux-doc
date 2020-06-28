@@ -19,3 +19,10 @@
 
 #### sound drivers and tools
 `sudo pacman -S alsa-utils alsa-plugins alsa-lib pavucontrol`
+
+`lspci -knn | grep -iA2 audio` list audio pci
+
+modprod.d/10-alsa.conf.d <-- conf kernel
+
+#### extra
+sudo pacman -S alacritty ranger rofi dmenu 
