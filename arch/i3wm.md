@@ -45,4 +45,8 @@ greater-session = lightdm-webkit2-greeter
 ...
 
 
+systemctl enable lightdm.service
+systemctl start lightdm.service
+reboot
+
 ```
