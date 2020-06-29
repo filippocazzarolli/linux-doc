@@ -24,11 +24,11 @@
 
 ```
 sudo vim /etc/modprobe.d/alsa-base.conf
-options snd_mia index=0
+
 options snd_hda_intel index=1
 ```
 
-TODO sound check
+`speaker-test` audio test
 
 #### extra
 `sudo pacman -S alacritty ranger rofi dmenu`
