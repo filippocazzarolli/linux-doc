@@ -1,17 +1,6 @@
 #### bash completion
 `sudo pacman -S bash-completion`
 
-#### Xorg server
-`sudo pacman -S xorg-server xorg-xinit`
-
-`sudo pacman -S xorg-apps` 
-
-#### i3 vm
-`sudo pacman -S i3`
-
-#### lighhdm
-`sudo pacman -S lightdm lightdm-webkit2-greeter`
-
 #### font
 `fc-list` show install font
 
@@ -28,7 +17,32 @@ sudo vim /etc/modprobe.d/alsa-base.conf
 options snd_hda_intel index=1
 ```
 
+`reboot`
+
 `speaker-test` audio test
 
 #### extra
 `sudo pacman -S alacritty ranger rofi dmenu`
+
+#### Xorg server
+`sudo pacman -S xorg-server xorg-xinit`
+
+`sudo pacman -S xorg-apps` 
+
+#### i3 vm
+`sudo pacman -S i3`
+
+#### lighhdm
+`sudo pacman -S lightdm lightdm-webkit2-greeter`
+
+```
+vim /etc/lightdm/lightdm.conf
+
+...
+[Seat:*]
+...
+greater-session = lightdm-webkit2-greeter
+...
+
+
+```
