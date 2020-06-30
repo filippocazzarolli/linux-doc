@@ -16,6 +16,8 @@ Install
 
 `pacman -Syyuw` download programs but leave them uninstalled (for manual install)
 
+`pacman -Si <name>` info remote package
+
 Remove
 ------
 
