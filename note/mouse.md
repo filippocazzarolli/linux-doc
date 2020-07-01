@@ -19,6 +19,7 @@ Section "InputClass"
         Option "TappingButtonMap" "lrm"
         Option "NaturalScrolling" "on"
         Option "ScrollMethod" "twofinger"
+        Option "TappingDrag" "false"
 EndSection
 
 ```
