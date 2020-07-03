@@ -51,7 +51,7 @@ Query local repo
 `pacman -Qs` search local repository for package
 
 
-Query local repo
+Aur
 ----------------
 
 `git clone <repository>`
