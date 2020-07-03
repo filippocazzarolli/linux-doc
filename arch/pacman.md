@@ -49,3 +49,11 @@ Query local repo
 `pacman -Ss` search remote repository for package
 
 `pacman -Qs` search local repository for package
+
+
+Query local repo
+----------------
+
+`git clone <repository>`
+
+`makepkg -si` 
