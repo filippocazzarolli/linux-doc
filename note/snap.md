@@ -6,6 +6,7 @@ sudo snap install node --channel=10/stable --classic
 
 ## change version
 sudo snap refresh node --channel=10/stable --classic
+
 sudo snap refresh node --channel=12/stable --classic
 
 ## list all relaese
