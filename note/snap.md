@@ -23,3 +23,6 @@ sudo npm install -g @angular/cli
 
 ### per installare correttamente i paccheti npm aggiungere il parametro in fondo
 sudo npm install -g @angular/cli  --scripts-prepend-node-path
+
+## per creare un nuovo progetto
+ng new yourProject --skipInstall=true
