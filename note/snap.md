@@ -19,7 +19,7 @@ snap refresh --list
 sudo snap refresh webstorm
 
 ### angular install 
-sudo npm install -g @angular/cli --scripts-prepend-node-path
+sudo npm install -g @angular/cli
 
 ### per installare correttamente i paccheti npm aggiungere il parametro in fondo
 sudo npm install -g @angular/cli  --scripts-prepend-node-path
