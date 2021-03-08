@@ -1,4 +1,4 @@
-# Install Arch with uefi and encrypt
+# Install Arch with uefi
 
 #### Verify the boot mode
 To verify the boot mode, list the efivars directory:
