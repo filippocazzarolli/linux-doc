@@ -89,7 +89,7 @@ If you created a swap volume, enable it with swapon(8):
 #### Install essential packages
 Use the pacstrap(8) script to install the base package, Linux kernel and firmware for common hardware:
 ```
-# pacstrap /mnt base linux linux-firmware vim
+# pacstrap /mnt base base-devel linux linux-firmware vim
 ```
 
 #### Fstab
