@@ -173,7 +173,7 @@ Set the root password:
 ```
 pacman -S networkmanager
 pacman -S git
-
+pacman -S bash-completion
 ```
 
 
