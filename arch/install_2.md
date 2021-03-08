@@ -18,10 +18,47 @@ To check the service status, use timedatectl status.
 When recognized by the live system, disks are assigned to a block device such as /dev/sda, /dev/nvme0n1 or /dev/mmcblk0. To identify these devices, use lsblk or fdisk.
 ```
 # fdisk -l
-# fdisk /dev/sda
 ```
-| Mount point | Partition | Partition type | Suggested size
-| ----------  | --------- | -------------- | --------- 
-| /mnt/boot or /mnt/efi |	/dev/efi_system_partition	| EFI system partition |	At least 260 MiB
-| [SWAP]| /dev/swap_partition	| Linux swap	| More than 512 MiB (RAM*2)
-| /mnt |	/dev/root_partition	| Linux x86-64 root (/)	| Remainder of the device
+**Example layouts**
+|partition number | Mount point | Partition | Partition type | Suggested size
+| ---- | ----------  | --------- | -------------- | --------- 
+| 1 | /mnt/boot or /mnt/efi |	/dev/efi_system_partition	| EFI system partition |	At least 260 MiB
+| 2 | [SWAP]| /dev/swap_partition	| Linux swap	| More than 512 MiB (RAM*2)
+| 3 | /mnt |	/dev/root_partition	| Linux x86-64 root (/)	| Remainder of the device
+
+```
+# fdisk /dev/sda
+#
+# (init GPT)
+# g (create GPT disklabel)
+#
+# (EFI partition)
+# n (new partition)
+# 1 (partition number)
+# <default> (first sector)
+# +550M (last sector)
+#
+# (SWAP partition)
+# n (new partition)
+# 2 (partition number)
+# <default> (first sector)
+# +4096M (last sector)
+#
+# (/ partition)
+# n (new partition)
+# 3 (partition number)
+# <default> (first sector)
+# <default> (last sector)
+#
+# (partition type)
+# t (partition efi)
+# 1 (partion number)
+# 1 (EFI System)
+#
+# t (partition swap)
+# 2 (partion number)
+# 19 (SWAP Linux)
+```
+
+
+
