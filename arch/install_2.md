@@ -62,5 +62,17 @@ When recognized by the live system, disks are assigned to a block device such as
 # w (write table)
 ```
 
+#### Format the partitions
+Once the partitions have been created, each newly created partition must be formatted with an appropriate file system. 
+```
+# (format efi partition)
+# mkfs.fat -F32 /dev/sda1
+#
+# (swap partition)
+# swapon /dev/sda2
+# 
+# (format root partition)
+# mkfs.ext4 /dev/sda3
+```
 
 
