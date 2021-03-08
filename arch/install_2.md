@@ -75,4 +75,14 @@ Once the partitions have been created, each newly created partition must be form
 # mkfs.ext4 /dev/sda3
 ```
 
+#### Mount the file systems
+Mount the root volume to /mnt. For example, if the root volume is /dev/root_partition:
+```
+# mount /dev/sda3 /mnt
+```
+Create any remaining mount points (such as /mnt/efi) using mkdir(1) and mount their corresponding volumes.
+If you created a swap volume, enable it with swapon(8):
+```
+# swapon /dev/sda2
+```
 
