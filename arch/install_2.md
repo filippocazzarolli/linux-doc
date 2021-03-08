@@ -86,3 +86,23 @@ If you created a swap volume, enable it with swapon(8):
 # swapon /dev/sda2
 ```
 
+#### Install essential packages
+Use the pacstrap(8) script to install the base package, Linux kernel and firmware for common hardware:
+```
+# pacstrap /mnt base linux linux-firmware
+```
+
+#### Fstab
+Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
+```
+# genfstab -U /mnt >> /mnt/etc/fstab
+```
+Check the resulting /mnt/etc/fstab file, and edit it in case of errors.
+
+
+#### Chroot
+Change root into the new system:
+```
+# arch-chroot /mnt
+```
+
