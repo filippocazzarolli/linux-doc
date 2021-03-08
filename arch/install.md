@@ -138,7 +138,7 @@ Add matching entries to hosts(5):
 /etc/hosts
 127.0.0.1	localhost
 ::1		localhost
-127.0.1.1	myhostname.localdomain	myhostname
+127.0.0.1	myhostname.localdomain	myhostname
 ```
 If the system has a permanent IP address, it should be used instead of 127.0.1.1.
 Complete the network configuration for the newly installed environment, that may include installing suitable network management software.
