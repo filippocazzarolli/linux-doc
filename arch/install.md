@@ -69,7 +69,7 @@ Once the partitions have been created, each newly created partition must be form
 # mkfs.fat -F32 /dev/sda1
 #
 # (swap partition)
-# swapon /dev/sda2
+# mkswap /dev/sda2
 # 
 # (format root partition)
 # mkfs.ext4 /dev/sda3
