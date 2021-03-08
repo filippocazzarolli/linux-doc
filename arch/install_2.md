@@ -143,3 +143,29 @@ Add matching entries to hosts(5):
 If the system has a permanent IP address, it should be used instead of 127.0.1.1.
 Complete the network configuration for the newly installed environment, that may include installing suitable network management software.
 
+#### Root password
+Set the root password:
+```
+# passwd
+```
+
+#### Add user and sudo
+```
+# useradd -m filippo
+# passwd filippo
+# usermod -aG wheel
+# pacman -S sudo
+```
+
+#### Grub
+```
+# pacman -S grub 
+# pacman -S efibootmgr dosfstools os-prober mtools
+#
+# mkdir /boot/EFI
+# mount /dev/sda1 /boot/EFI
+# grub-install --target=
+
+```
+
+
