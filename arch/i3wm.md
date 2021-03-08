@@ -1,3 +1,12 @@
+#### Installing YAY
+```
+mkdir sources && \
+cd sources && \
+git clone https://aur.archlinux.org/yay.git && \
+cd yay && \
+makepkg -si
+```
+
 #### bash completion
 `sudo pacman -S bash-completion`
 
