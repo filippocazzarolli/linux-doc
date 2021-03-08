@@ -89,7 +89,7 @@ If you created a swap volume, enable it with swapon(8):
 #### Install essential packages
 Use the pacstrap(8) script to install the base package, Linux kernel and firmware for common hardware:
 ```
-# pacstrap /mnt base linux linux-firmware
+# pacstrap /mnt base linux linux-firmware vim
 ```
 
 #### Fstab
@@ -99,10 +99,47 @@ Generate an fstab file (use -U or -L to define by UUID or labels, respectively):
 ```
 Check the resulting /mnt/etc/fstab file, and edit it in case of errors.
 
-
 #### Chroot
 Change root into the new system:
 ```
 # arch-chroot /mnt
 ```
+
+#### Time zone
+Set the time zone:
+```
+# ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime
+```
+Run hwclock(8) to generate /etc/adjtime:
+```
+# hwclock --systohc
+```
+This command assumes the hardware clock is set to UTC. See System time#Time standard for details.
+
+#### Localization
+Edit /etc/locale.gen and uncomment en_US.UTF-8 UTF-8 and other needed locales. Generate the locales by running:
+```
+# locale-gen
+```
+Create the locale.conf(5) file, and set the LANG variable accordingly:
+```
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+export LANG=en_US.UTF-8
+```
+
+#### Network configuration
+Create the hostname file:
+```
+/etc/hostname
+myhostname
+```
+Add matching entries to hosts(5):
+```
+/etc/hosts
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	myhostname.localdomain	myhostname
+```
+If the system has a permanent IP address, it should be used instead of 127.0.1.1.
+Complete the network configuration for the newly installed environment, that may include installing suitable network management software.
 
