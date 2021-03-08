@@ -164,7 +164,15 @@ Set the root password:
 #
 # mkdir /boot/EFI
 # mount /dev/sda1 /boot/EFI
-# grub-install --target=
+# grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
+# grub-mkconfig -o /boot/grub/grub.cfg
+
+```
+
+#### General staff
+```
+pacman -S networkmanager
+pacman -S git
 
 ```
 
