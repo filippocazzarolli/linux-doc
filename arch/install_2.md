@@ -58,6 +58,8 @@ When recognized by the live system, disks are assigned to a block device such as
 # t (partition swap)
 # 2 (partion number)
 # 19 (SWAP Linux)
+# 
+# w (write table)
 ```
 
 
