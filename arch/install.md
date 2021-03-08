@@ -153,7 +153,7 @@ Set the root password:
 ```
 # useradd -m filippo
 # passwd filippo
-# usermod -aG wheel
+# usermod -aG wheel filippo
 # pacman -S sudo
 ```
 
