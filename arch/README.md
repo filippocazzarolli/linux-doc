@@ -1,3 +1,3 @@
-# Install Arch 
+# Arch 
 
 all my doc to install and manage arch
