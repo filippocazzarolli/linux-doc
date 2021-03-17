@@ -11,6 +11,8 @@ makepkg -si
 `sudo pacman -S bash-completion`
 
 #### font
+`pacman -S fontconfig`
+
 `fc-list` show install font
 
 `sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont ttf-liberation ttf-droid ttf-inconsolata ttf-roboto terminus-font ttf-font-awesome`
