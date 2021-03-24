@@ -7,6 +7,14 @@ cd yay && \
 makepkg -si
 ```
 
+#### Install Drivers
+You might find that you need video drivers. Depending on what hardware you are running, install the driver for your system. You might not need these at all. It is possible that your system will work completely OK out of the box.
+```
+sudo pacman -S nvidia nvidia-utils    # NVIDIA 
+sudo pacman -S xf86-video-amdgpu mesa   # AMD
+sudo pacman -S xf86-video-intel mesa    # Intel
+```
+
 #### bash completion
 `sudo pacman -S bash-completion`
 
