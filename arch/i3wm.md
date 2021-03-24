@@ -13,6 +13,7 @@ You might find that you need video drivers. Depending on what hardware you are r
 sudo pacman -S nvidia nvidia-utils    # NVIDIA 
 sudo pacman -S xf86-video-amdgpu mesa   # AMD
 sudo pacman -S xf86-video-intel mesa    # Intel
+sudo pacman -S xf86-video-qxl mesa    # virt-manager
 ```
 
 #### bash completion
