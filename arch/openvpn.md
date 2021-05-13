@@ -12,5 +12,9 @@ nmcli connection import type openvpn file </etc/openvpn/client/file.ovpn>
 nmcli connection modify aws-atena vpn.user-name <username>
 
 nmcli connection up aws-atena --ask
+
+# remove default route
+nmcli connection modify aws-atena ipv4.never-default true
+nmcli connection modify aws-atena ipv6.never-default true
 ```
 
