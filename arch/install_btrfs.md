@@ -111,6 +111,7 @@ $ sudo btrfs subvolume delete /.snapshots
 $ sudo mkdir /.snapshots
 $ sudo mkdir /.snapshots
 $ sudo chmod 750 /.snapshots
+$ sudo chown :filippo /.snapshots
 $ sudo vim /etc/snapper/configs/root
 
 # users and groups allowed to work with config
