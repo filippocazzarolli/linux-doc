@@ -127,11 +127,55 @@ TIMELINE_LIMIT_YEARLY="0"
 $ sudo systemctl enable --now snapper-timeline.timer
 $ sudo systemctl enable --now snapper-cleanup.timer
 $ 
+$ git clone  https://aur.archlinux.org/yay
+$ cd yay
+$ makepkg -si PKGBUILD
+$ 
+$ yay -S snap-pac-grub snapper-gui
+$ 
+$ sudo pacman -S xf86-video-qxl
+$ 
+$ sudo pacman -S xorg gnome gdm firefox gnome-tweaks
+$ sudo systemctl enable gdm
+$ 
+$ sudo mkdir /etc/pacman.d/hooks
+$ sudo vim /etc/pacman.d/hooks/50-bootbackup.hook
+
+[Trigger]
+Operation = Upgrade
+Operation = Install
+Operation = Remove
+Type = Path
+Target = boot/*
+
+[Action]
+Depends = rsync
+Description = Backing up / boot...
+When = PreTransaction
+Exec = /usr/bin/rsync -a --delete /boot /.bootbackup
+
+$ sudo pacman -S rsync 
+$ 
+$ reboot
 $ 
 $ 
 $ 
 $ 
 $ 
 $ 
-$  
-```
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+$ 
+v```
