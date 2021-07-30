@@ -73,10 +73,65 @@ $ vim /etc/hosts
 127.0.1.1	arch-btrfs.localdomain	arch-brtfs
 
 $ 
+$ passwd
+$ 
+$ pacman -S grub efibootmgr networkmanager network-manager-applet dialog wpa_supplicant mtools dosfstools git reflector snapper bluez bluez-utils cups xdg-utils xdg-user-dirs alsa-utils pulseaudio pulseaudio-bluetooth base-devel linux-headers
+$ 
+$ vim /etc/mkinitcpio.conf
+
+MODULES=(btrfs)
+
+$
+$ mkinitcpio -p linux
+$ 
+$ grub-install --target=/x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+$ grub-mkconfig -o /boot/grub/grub.cfg
+$ 
+$ systemctl enable NetworkManager
+$ systemctl enable bluetooth
+$ systemctl enable cups
+$ 
+$ useradd -mG wheel filippo
+$ passwd filippo
+$ 
+$ EDITOR=vim visudo
+
+# uncomment this line
+%wheel ALL=(ALL) ALL
+
+$ 
+$ pacman -S bash-completion
+$ exit
+$ umount -a
+$ reboot
+$ 
+$ sudo umount /.snapshots
+$ sudo snapper -c root create-config /
+$ sudo btrfs subvolume delete /.snapshots
+$ sudo mkdir /.snapshots
+$ sudo mkdir /.snapshots
+$ sudo chmod 750 /.snapshots
+$ sudo vim /etc/snapper/configs/root
+
+# users and groups allowed to work with config
+ALLOW_USERS="filippo"
+
+# limits for timeline cleanup
+TIMELINE_MIN_AGE="1800"
+TIMELINE_LIMIT_HOURLY="5"
+TIMELINE_LIMIT_DAILY="7"
+TIMELINE_LIMIT_WEEKLY="0"
+TIMELINE_LIMIT_MONTHLY="0"
+TIMELINE_LIMIT_YEARLY="0"
+
+$ sudo systemctl enable --now snapper-timeline.timer
+$ sudo systemctl enable --now snapper-cleanup.timer
 $ 
 $ 
 $ 
 $ 
 $ 
 $ 
+$ 
+$  
 ```
