@@ -77,6 +77,8 @@ GRUB_CMDLINE_LINUX="cryptdevice=UUID=<UUID>:cryptroot root=/dev/mapper/cryptroot
 
 $ grub-mkconfig -o /boot/grub/grub.cfg
 $ 
+$ pacman -S bash-completion
+$ 
 $ systemctl enable NetwokManager
 $ systemctl enable bluetooth
 $ systemctl enable org.cup.cupsd
