@@ -48,16 +48,58 @@ it_IT.UTF-8
 
 $ locale-gen
 $ 
+$ echo LANG=it_IT.UTF-8 >> /etc/locale.conf
+$
+$ echo "fc-work-desktop" > /etc/hostname
+$ 
+$ vim /etc/hosts
+127.0.0.1      localhost
+::1            localhost
+127.0.1.1      fc-work-desktop.localdomain fc-work-desktop
+
+$ 
+$ passwd
+$ 
+$ pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base-devel linux-header reflector git bluez bluez-utils pulseaudio-bluetooth cups xdg-utils xdg-user-dirs
+$ 
+$ vim /etc/mkinitcpio.conf
+
+HOOKS=(base udev autodetect modconf block encrypt ...)
+
+$ mkinitcpio -p linux
+$ 
+$ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+$ grub-mkconfig -o /boot/grub/grub.cfg
+$ blkid <--- get id of crupt, insert into grub configuration 
+$ vim /etc/default/grub
+
+GRUB_CMDLINE_LINUX="cryptdevice=UUID=<UUID>:cryptroot root=/dev/mapper/cryptroot"
+
+$ grub-mkconfig -o /boot/grub/grub.cfg
+$ 
+$ systemctl enable NetwokManager
+$ systemctl enable bluetooth
+$ systemctl enable org.cup.cupsd
+$ 
+$ useradd -mG wheel filippo
+$ passwd filippo
+$ 
+$ EDITOR=vim visudo
+
+%wheel ALL=(ALL) ALL
+
+$ exit
+$ umount -a
+$ reboot
+$
+$ git clone https://aur.archlinux.org/yay.git
+$ cd yay
+$ makepkg -si PKBUILD
 $ 
 $ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
+$ sudo pacman -S xf86-video-intel
+$ sudo pacman -S xf86-video-amdgpu
+$ sudo pacman -S nvidia nvidia-utils nvidia-settings
 ```
 
 
