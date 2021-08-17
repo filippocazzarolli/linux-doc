@@ -57,3 +57,18 @@ Aur
 `git clone <repository>`
 
 `makepkg -si` 
+  
+Basic Maintenance
+----------------  
+  
+```
+# clean cache
+sudo pacman -Sc 
+yay -Sc
+  
+# list orphan package
+sudo pacman -Qdtq  
+
+# remove all orphan package
+sudo pacman -Rns $(pacman -Qdtq)
+````
