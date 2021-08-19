@@ -10,7 +10,7 @@ $ sudo apt install build-essential rsync gcc bc bison flex libssl-dev libncurses
 $ 
 $ cp /boot/config-$(uname -r) ./.config
 $ 
-$ make localmdconfig   <-- y/n
+$ make localmodconfig   <-- y/n
 $ make menuconfig      <-- menu
 $ 
 $ make -j2 deb-pkg                <-- non funziona
