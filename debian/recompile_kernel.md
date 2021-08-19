@@ -13,30 +13,11 @@ $
 $ make localmdconfig   <-- y/n
 $ make menuconfig      <-- menu
 $ 
-$ make deb-pkg -j2
+$ make -j2 deb-pkg                <-- non funziona
+$ fakeroot sudo make -j4 deb-pkg  <-- ???
 $ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
+$ cd ..
+$ sudo dpkg -i linux-*.deb
 $ 
 $ 
 ```
