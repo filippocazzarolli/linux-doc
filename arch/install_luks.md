@@ -18,7 +18,7 @@ n
 w
 
 $ cryptsetup -y -v luksFormat /dev/vda2
-$ cryptsetup luksOpen /dev/vda2 cryptroot
+$ cryptsetup open /dev/vda2 cryptroot
 $ mkfs.ext4 /dev/mapper/cryptroot
 $ mkfs.fat -F32 /dev/vda1
 $ 
