@@ -60,7 +60,7 @@ $ vim /etc/hosts
 $ 
 $ passwd
 $ 
-$ pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base-devel linux-header reflector git bluez bluez-utils pulseaudio-bluetooth cups xdg-utils xdg-user-dirs
+$ pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base-devel linux-headers reflector git bluez bluez-utils pulseaudio-bluetooth cups xdg-utils xdg-user-dirs
 $ 
 $ vim /etc/mkinitcpio.conf
 
