@@ -40,7 +40,7 @@ $ vim /etc/fstab
 
 /swapfile none swap defaults 0 0 
 
-$ ls -sf /usr/share/zonefile/Europe/Rome /etc/localtime
+$ ln -sf /usr/share/zonefile/Europe/Rome /etc/localtime
 $ hwclock --systohc
 $ vim /etc/locale.gen
 
