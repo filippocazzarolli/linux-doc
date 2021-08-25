@@ -6,6 +6,16 @@ git clone https://aur.archlinux.org/yay.git && \
 cd yay && \
 makepkg -si
 ```
+#### Installing YAY
+```
+sudo pacman -S qemu libvirt edk2-ovmf virt-manager ebtables dnsmasq
+
+sudo systemctl enable libvirtd.service
+sudo systemctl start libvirtd.service
+
+sudo systemctl enable virtlogd.socket
+sudo systemctl start virtlogd.socket
+```
 
 #### Install Drivers
 You might find that you need video drivers. Depending on what hardware you are running, install the driver for your system. You might not need these at all. It is possible that your system will work completely OK out of the box.
